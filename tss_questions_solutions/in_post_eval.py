@@ -39,7 +39,7 @@ def in_to_post(s):
 
     return ops
 
-string = input("infix").split()
+
 
 def solve(num1,num2,op):
 	num1=float(num1)
@@ -69,7 +69,9 @@ def eval_post(lst):
 			top+=1
 	return stack[0]
 			
+if __name__ == "__main__":
+    string = input("Enter infix(space seperated):").split()
 
-print("postfix="," ".join(in_to_post(string)))
-print("ans=",eval_post(string))
+    print("Postfix = "," ".join(in_to_post(string)))
+    print("ans=",eval_post(string))
 
